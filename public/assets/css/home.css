@@ -1,0 +1,225 @@
+/* Hero Background Animation */
+.hero-bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-bg-animation .circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 20s ease-in-out infinite;
+}
+
+.hero-bg-animation .circle-1 {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -100px;
+    animation-delay: 0s;
+}
+
+.hero-bg-animation .circle-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -200px;
+    right: -150px;
+    animation-delay: 5s;
+}
+
+.hero-bg-animation .circle-3 {
+    width: 250px;
+    height: 250px;
+    top: 50%;
+    right: 10%;
+    animation-delay: 10s;
+}
+
+.hero-bg-animation .circle-4 {
+    width: 200px;
+    height: 200px;
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 15s;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+
+    25% {
+        transform: translateY(-30px) scale(1.1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-60px) scale(1.2);
+        opacity: 0.3;
+    }
+
+    75% {
+        transform: translateY(-30px) scale(1.1);
+        opacity: 0.4;
+    }
+}
+
+@keyframes animate-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes animate-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animate-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Apply animation classes */
+.animate-fade-in {
+    animation: animate-fade-in 1s ease-out;
+}
+
+.animate-slide-up {
+    animation: animate-slide-up 0.8s ease-out;
+}
+
+.animate-float {
+    animation: animate-float 3s ease-in-out infinite;
+}
+
+/* Floating notification cards animation */
+.floating-card {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Hover effects for job cards */
+.job-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15) !important;
+    border-color: rgba(37, 99, 235, 0.2) !important;
+}
+
+.latest-job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.12) !important;
+    border-color: #2563eb !important;
+}
+
+/* Category card hover effects */
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.category-card:hover .category-icon-wrapper {
+    transform: scale(1.1);
+}
+
+.category-card:hover .fa-arrow-right {
+    opacity: 1 !important;
+    transform: translateX(5px);
+}
+
+/* Hero button hover effects */
+.hero-section .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.hero-section .btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+/* Search section enhancement */
+.search-section .form-control:focus,
+.search-section .form-select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Smooth transitions for all interactive elements */
+.btn,
+.card,
+.badge,
+.form-control,
+.form-select {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Wave animation for bottom of hero */
+@keyframes wave {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-50px);
+    }
+}
+
+.wave-bottom {
+    animation: wave 10s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 500px !important;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .hero-bg-animation .circle {
+        display: none;
+    }
+}
+
+.profile-circle {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #0d6efd;
+    border-radius: 50%;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.profile-circle:hover {
+    background-color: #0d6efd;
+    color: white;
+}
